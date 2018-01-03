@@ -423,6 +423,13 @@ define Device/tl-mr6400-v1
 endef
 TARGET_DEVICES += tl-mr6400-v1
 
+define Device/tl-mr6400-v2
+  $(Device/tl-mr6400-v1)
+  DEVICE_TITLE := TP-LINK TL-MR6400 v2
+  DEVICE_PACKAGES := -adb-enablemodem
+endef
+TARGET_DEVICES += tl-mr6400-v2
+
 define Device/tl-wa701nd-v1
   $(Device/tplink-4m)
   DEVICE_TITLE := TP-LINK TL-WA701N/ND v1
