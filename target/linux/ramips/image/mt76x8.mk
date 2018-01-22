@@ -18,7 +18,6 @@ define Device/tplink
 endef
 DEVICE_VARS += TPLINK_FLASHLAYOUT TPLINK_HWID TPLINK_HWREV TPLINK_HWREVADD TPLINK_HVERSION
 
-
 define Device/duzun-dm06
   DTS := DUZUN-DM06
   DEVICE_TITLE := DuZun DM06
@@ -151,6 +150,19 @@ define Device/tplink_c20-v4
   TPLINK_HVERSION := 3
 endef
 TARGET_DEVICES += tplink_c20-v4
+
+define Device/tplink_c50-v3
+  $(Device/tplink)
+  DTS := ArcherC50V3
+  IMAGE_SIZE := 7808k
+  DEVICE_TITLE := TP-Link ArcherC50 v3
+  TPLINK_FLASHLAYOUT := 8Mmtk
+  TPLINK_HWID := 0x001D9BA4
+  TPLINK_HWREV := 0x79
+  TPLINK_HWREVADD := 0x1
+  TPLINK_HVERSION := 3
+endef
+TARGET_DEVICES += tplink_c50-v3
 
 define Device/tplink_tl-mr3420-v5
   $(Device/tplink)
